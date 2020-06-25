@@ -1,0 +1,47 @@
+<h6>Dashboard</h6>
+<h3>Welcome {{name}}</h3>
+<p>Here are your patients</p>
+
+{{#if patients}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Age</th>
+            <th>Date</th>
+            <th>Diagnosis</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each patients}}
+        <tr>
+            <td><a href="/patients/{{_id}}">{{_id}}</a></td>
+            <td><a href="/patients/{{_id}}">{{name}}</a></td>
+            <td>{{age}}</td>
+            <td>{{ getAge age}}</td>
+            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            <td><span class="dash-status">{{diagnosis}}</span></td>
+            <td><span class="dash-status">{{status}}</span></td>
+            <td class="buttons">
+                <a href="/patients/edit/{{_id}}" class="btn btn-float">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <form action="/patients/{{_id}}" method="POST" 
+                id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn red">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>You have not created any records</p>
+{{/if}}

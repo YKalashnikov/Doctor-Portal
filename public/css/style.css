@@ -1,0 +1,64 @@
+p {
+    margin: 10px 0 !important;
+  }
+  
+  .login-container {
+    width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
+
+  .card-round {
+    border-radius: 15px;
+  }
+  .patient {
+   border-radius:16px;
+  }
+  .patient div{
+    border-bottom: 2px solid black;
+  }
+  .patient  div:last-child{
+    border-bottom: none;
+  }
+  .patient-image{
+    padding-top:3rem;
+  }
+  .fa-small {
+    font-size: 16px !important;
+  }
+  
+  .btn-float {
+    float: left;
+    margin-right: 10px;
+  }
+
+ .buttons{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btn {
+    border-radius: 50px;
+  }
+  
+  .img-small {
+    width: 250px;
+  }
+
+  .sidenav {
+   margin:12px !important;
+   margin-bottom:52px !important;
+   border-radius: 12px;
+   height: 10rem;
+  }
+
+  nav {
+   padding: 0 12rem;
+   border-radius: 12px;
+  }
+

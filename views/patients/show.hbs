@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col s12 m8">
+        <h3>{{patient.name}}
+            <small>{{{editIcon patient.user user patient._id false}}}</small>
+        </h3>
+        <div class="card patient">
+            <div class="card-content">
+                <div class="row">
+                  <span class="card-title">Created: {{formatDate patient.createdAt 'MMMM Do YYYY, h:mm:ss a'}}</span>
+                </div>
+                <div class="row">
+                <span>ID:  {{patient._id}}</span>
+                </div>
+                 <div class="row">
+                <span>DOB:  {{patient.age}}</span>
+                </div>
+                <div class="row">
+                <span >Current Age: {{getAge patient.age}}</span>
+                </div>
+                 <div class="row">
+                <span>Diagnosis:  {{patient.diagnosis}}</span>
+                </div>
+                <div class="row">
+                <span>Notes:   {{{patient.body}}}</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m4">
+              <h5 class="patient-image">{{patient._id}} </h5>
+        <div class="card center-align card-round">
+            <div class="card-content resize">
+                <span class="card-title">{{patient.user.displayName}}</span>
+                <img src="{{patient.user.image}}" class="circle responsive-img img-small">
+            </div>
+            <div class="card-action">
+                <a href="/patients/user/{{patient.user._id}}">More From {{patient.user.firstName}}</a>
+            </div>
+        </div>
+    </div>
+</div>
