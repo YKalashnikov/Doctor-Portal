@@ -24,6 +24,8 @@ $ go to http://localhost:3000
   In the file add PORT, MONGO_URI, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET
 ```
 
-![]()
-![]()
-![]()
+![](https://github.com/YKalashnikov/Doctor-Portal/blob/master/assets/initial.png)
+![](https://github.com/YKalashnikov/Doctor-Portal/blob/master/assets/dashboard.png)
+![](https://github.com/YKalashnikov/Doctor-Portal/blob/master/assets/show.png)
+![](https://github.com/YKalashnikov/Doctor-Portal/blob/master/assets/nav-bar.png)
+![](https://github.com/YKalashnikov/Doctor-Portal/blob/master/assets/patietns.png)
