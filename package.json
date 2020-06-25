@@ -1,5 +1,5 @@
 {
-  "name": "Doctor Portal",
+  "name": "Doctor-Portal",
   "version": "1.0.0",
   "description": "Portal for doctors to see patients",
   "main": "app.js",

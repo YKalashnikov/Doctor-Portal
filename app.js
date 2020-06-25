@@ -30,6 +30,8 @@ connectDB()
 
 const app = express()
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 // Body parser
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
@@ -62,6 +64,8 @@ app.engine(
     })
   )
 app.set('view engine', '.hbs')
+
+
 
 
 // Method override
@@ -98,7 +102,7 @@ app.use('/',require('./routes/index'))
 app.use('/auth',require('./routes/auth'))
 app.use('/patients', require('./routes/patients'))
 
-app.use(express.static(path.join(__dirname, 'public')))
+
 
 const PORT = process.env.PORT || 5000
 
